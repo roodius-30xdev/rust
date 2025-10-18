@@ -1,3 +1,3 @@
-include!("./Algorithm_Complexity_Sorting_Algo/Merge_sort_d_and_q.rs");
+include!("./Algorithm_Complexity_Sorting_Algo/quik_sort.rs");
 // include!("Arrray.rs");
 
