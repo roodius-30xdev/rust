@@ -17,12 +17,15 @@ Combine the results to get a sorted array.
 
 */
 
+// use std::fmt::Debug;
 
+mod random_no;
 
 
 
 pub fn pivott(arr:&mut [u32]) -> usize {
-    let mut pivot = 0;
+    let mut pivot = random_no::rand(arr.len());
+    arr.swap(pivot,0);
 
     for i in 1..arr.len(){
         if arr[i] < arr[pivot] {
@@ -57,10 +60,27 @@ fn main(){
     for i in 0..arr.len(){
         println!(" {} ", arr[i]);
     }
-
+    panic!();
     // assert_eq!(arr,[1,2,4,5,6,7,8,9,10,11,12,34]);
 
     /*
        assert => { check on run time condition true or not }
      */
 }
+
+// pub fn threaded_quick_sort(arr:&mut [u32]){
+//     if arr.len() <= 1 {
+//         return;
+//     }   
+
+//     let  p = pivott(arr);
+
+//     let (a,b) = arr.split_at_mut(p);
+
+//     // let handle = std::thread::spawn(move || {
+//     //     threaded_quick_sort( a);
+//     // });
+//     threaded_quick_sort( b);
+
+//     handle.join().ok();
+// }   
