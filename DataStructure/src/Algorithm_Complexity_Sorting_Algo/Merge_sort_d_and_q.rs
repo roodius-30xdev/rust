@@ -56,8 +56,7 @@ pub fn merge_sort(arr:&mut [u32]){
 
 
 fn main(){
-    let mut arr:[u32;10] = [1,3,2,5,4,7,6,9,8,10];
-    let len:usize = arr.len();    
+    let mut arr:[u32;10] = [1,3,2,5,4,7,6,9,8,10]; 
     merge_sort(&mut arr);
 
     for val in arr.iter() {
