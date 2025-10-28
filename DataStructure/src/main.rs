@@ -6,5 +6,14 @@
 // include!("impl_on_struct.rs");
 // include!("vec.rs");
 // include!("Option_num.rs");
-include!("data_struc/Linked_List.rs");
+// include!("data_struc/Linked_List.rs");
 // include!("Box.rs");
+// include!("take.rs");
+// include!("let_some.rs");
+//  include!("shadow_var_and_mut_and_scope.rs");
+// include!("Call_by_Value_vs_Call_by_Reference.rs");
+// include!("input_output.rs");
+// include!("life_time_params.rs");
+// include!("Reading_file.rs");
+// include!("write_file.rs");
+include!("modules_sub_modules_lib.rs");
