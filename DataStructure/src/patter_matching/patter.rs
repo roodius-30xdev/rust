@@ -81,7 +81,39 @@ fn main(){
         None => println!("no shape here")
     }
 
+     // [destructure structs using pattern matching]
 
+    let p = Point {
+        x:0,
+        y:39
+    };
+
+    match p {
+        Point{x:0,y} => println!("on Y axis at {}", y),
+        Point{x,y:0} => println!("on X axis at {}", x),
+        Point{x,y} => println!("Point is at ({},{})", x,y)
+    }
+
+    // [destructure tuples]
+
+    let point = (10,34);
+    let (x,y) = point;
+    println!("{},{}", x ,y);
+
+    // in match 
+    let pair = (0,-5);
+
+    match pair {
+        (0,y) => println!("x is zero and y is: {}", y),
+        (x,0) => println!("y is zero x is: {}", x),
+        (x,y) => println!("x and y is {}, {}" ,x ,y)
+    }
+
+}
+
+struct Point {
+    x:i32,
+    y:i32
 }
 
 enum Shape {
