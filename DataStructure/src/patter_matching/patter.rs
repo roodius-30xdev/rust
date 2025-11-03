@@ -109,6 +109,39 @@ fn main(){
         (x,y) => println!("x and y is {}, {}" ,x ,y)
     }
 
+    // [if let and while let]
+    // if let Used when you want to match a single pattern and ignore all others. 
+
+    let number_some = Some(45);
+
+    if let Some(value) = number_some {
+        println!("Got a  number: {}", value)
+    } else {
+        println!("no value found")
+    }
+
+    /* while let
+        Used in loops to keep matching as long as the pattern fits */
+
+    let mut numbers = vec![3,4,55,6];
+
+    while let Some(value) = numbers.pop() {
+        println!("{}", value);        
+    }
+
+    /*
+    In Rust, Option<T> is an enum that represents an optional value:
+    Some(T) → contains a value of type T
+    None → represents the absence of a value
+     */
+
+    let num = Some(5);
+
+    match num {
+        Some(value)  => println!("Value is: {}",value),
+        None => println!("No value Found")       
+    }
+
 }
 
 struct Point {
